@@ -1,0 +1,124 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius2($radius, $radius2) {
+  -webkit-border-radius: $radius $radius2;
+  -moz-border-radius: $radius $radius2;
+  -ms-border-radius: $radius $radius2;
+  border-radius: $radius $radius2;
+}
+
+@mixin border-radius4($radius, $radius2, $radius3, $radius4) {
+  -webkit-border-radius: $radius $radius2 $radius3 $radius4;
+  -moz-border-radius: $radius $radius2 $radius3 $radius4;
+  -ms-border-radius: $radius $radius2 $radius3 $radius4;
+  border-radius: $radius $radius2 $radius3 $radius4;
+}
+
+@mixin box-shadow($first, $second, $third, $fourth, $color) {
+  -webkit-box-shadow: $first $second $third $fourth $color;
+  -moz-box-shadow: $first $second $third $fourth $color;
+  box-shadow: $first $second $third $fourth $color;
+}
+
+@mixin easy-font-size($time) {
+  -webkit-transition: font-size $time ease;
+  -moz-transition: font-size $time ease;
+  -o-transition: font-size $time ease;
+  -ms-transition: font-size $time ease;
+  transition: font-size $time ease;
+}
+
+@mixin easy-background-color($time) {
+  -webkit-transition: background-color $time ease;
+  -moz-transition: background-color $time ease;
+  -o-transition: background-color $time ease;
+  -ms-transition: background-color $time ease;
+  transition: background-color $time ease;
+}
+
+@mixin easy-max-height($time) {
+  -webkit-transition: max-height $time ease-in-out;
+  -moz-transition: max-height $time ease-in-out;
+  -o-transition: max-height $time ease-in-out;
+  -ms-transition: max-height $time ease-in-out;
+  transition: max-height $time ease-in-out;
+}
+
+@mixin easy-width($time) {
+  -webkit-transition: width $time ease-in-out;
+  -moz-transition: width $time ease-in-out;
+  -o-transition: width $time ease-in-out;
+  -ms-transition: width $time ease-in-out;
+  transition: width $time ease-in-out;
+}
+@mixin easy-height($time) {
+  -webkit-transition: height $time ease-in-out;
+  -moz-transition: height $time ease-in-out;
+  -o-transition: height $time ease-in-out;
+  -ms-transition: height $time ease-in-out;
+  transition: height $time ease-in-out;
+}
+
+@mixin easy-transition($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin easy-opacity($time) {
+  -webkit-transition: opacity $time ease-in-out;
+  -moz-transition: opacity $time ease-in-out;
+  -o-transition: opacity $time ease-in-out;
+  -ms-transition: opacity $time ease-in-out;
+  transition: opacity $time ease-in-out;
+}
+
+@mixin base-transition($time) {
+  -moz-transition: $time;
+  -ms-transition: $time;
+  -o-transition: $time;
+  -webkit-transition: $time;
+  transition: $time;
+}
+
+@mixin coordinates($top, $bottom, $left, $right) {
+  top:$top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin user-select($param) {
+  -webkit-touch-callout: $param;
+  -webkit-user-select: $param;
+  -khtml-user-select: $param;
+  -moz-user-select: $param;
+  -ms-user-select: $param;
+  user-select: $param;
+}
+
+@mixin opacity($param) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$param*100})";       /* IE 8 */
+  filter: alpha(opacity=#{$param*100});                                               /* IE 5-7 */
+  -moz-opacity: $param;                                                      /* Netscape */
+  -khtml-opacity: $param;                                                    /* Safari 1.x */
+  opacity: $param;
+}
+
+@mixin fade($value) {
+  opacity: $value;
+  transition: opacity .5s ease-in;
+}
+
+@mixin vertical-align {
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}

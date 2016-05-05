@@ -1,0 +1,8 @@
+# NPM modules
+node_modules/
+
+# Gulp build of static assets
+build/
+
+# SASS cache files
+.sass-cache/

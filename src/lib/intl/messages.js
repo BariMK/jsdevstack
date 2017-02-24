@@ -1,7 +1,7 @@
 export default {
     en: {
         app: {
-            title: 'TripMan'
+            title: 'MK & AK devstack'
         },
         user: {
             name: 'User name',

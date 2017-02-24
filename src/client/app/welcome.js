@@ -10,7 +10,7 @@ export default class Welcome extends PureRenderComponent {
     render() {
         const {msg} = this.props
         return (
-            <div className="hidden">{format(msg.user.panel.welcome.title)}</div>
+            <div>{format(msg.user.panel.welcome.title)}</div>
         )
     }
 }

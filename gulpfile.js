@@ -80,7 +80,6 @@ gulp.task('scripts', function(e) {
     var babelify = require('babelify') // ES6 transpiler
     var source = require('vinyl-source-stream')
     var buffer = require('vinyl-buffer')
-    var strictify = require('strictify')
     var uglify = require('gulp-uglifyjs')
 
     //todo specify browserify shim paths in some config
@@ -117,7 +116,6 @@ gulp.task('scripts', function(e) {
             }
         ))
         .bundle()
-        .pipe(strictify())
         .pipe(source('app.js'))
         .pipe(buffer())
         .pipe(_if(args.production, uglify())) // TODO mangle, compress?
